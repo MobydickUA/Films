@@ -29,8 +29,7 @@ class Model_films extends Model
 
 	public function searchByName($name)
 	{
-		$query = $this->db->query("SELECT * FROM films WHERE id IN (SELECT film_id from actors_in_films where actor_name LIKE '%" . $$this->db->real_escape_string($name) . "%' ); 
-		");
+		$query = $this->db->query("SELECT * FROM films WHERE id IN (SELECT film_id from actors_in_films where actor_name LIKE '%" . $this->db->real_escape_string($name) . "%' ); ");
 		// die(var_dump($this->db));
 		return $query->fetch_all(MYSQLI_ASSOC);
 	}
