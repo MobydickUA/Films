@@ -1,0 +1,14 @@
+<h1><?php echo $data[0]['title']; ?></h1>
+
+<h3> Release year: <?php echo date_format(date_create($data[0]['year']), "Y"); ?></h3>
+<h3> Format: <?php echo $data[0]['format']?></h3>
+
+Stars:
+<?php foreach ($data as $row): ?>
+	<a href="/films/search_by_name?name=<?php echo $row['actor_name']; ?>"><?php echo $row['actor_name']; ?></a><br>
+<?php endforeach; ?>
+<br>
+
+<span class="label label-warning">
+	<a href="/films/delete?id=<?php echo $data[0]['id']; ?>">Delete film</a>
+</span>

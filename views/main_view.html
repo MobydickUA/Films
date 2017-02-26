@@ -1,0 +1,12 @@
+<script src="scripts/noclick.js1"></script>
+<h1  id="title">Films</h1><p><p><p><p>
+<span class="article" id="article_all">
+<ul id="articleList">
+<?php foreach ($data as $row): ?>
+	<a href="/films/<?php echo $row['id']?>"><?php echo $row['name']?></a><br>
+<?php endforeach; ?>
+</ul>
+</span>
+<div  id="articleDate"> 
+</div>
+</ul>

@@ -1,0 +1,26 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="/static/bootstrap.css">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<ul class="nav navbar-nav">
+			<li><a href="/films/">All films</a></li>
+			<li><a href="/films/load_file">Load file</a></li>
+			<li><a href="/films/add_film">Add film</a></li>
+		</ul>
+		<ul class="nav navbar-nav">
+			<li>
+				<form action="/films/search_by_title" class="navbar-form navbar-left">
+					<input type="text" name="film_name" class="form-control" placeholder="Film Title">
+					<button class="btn btn-default">Search</button>
+				</form>
+			</li>
+			<li>
+				<form action="/films/search_by_name" class="navbar-form navbar-left">
+					<input type="text" name="name" class="form-control" placeholder="Actor`s Name">
+					<button class="btn btn-default">Search</button>
+				</form>
+			</li>
+		</ul>
+	</nav>
+	<div class="col-lg-8 col-lg-offset-2">
