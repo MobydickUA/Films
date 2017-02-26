@@ -4,11 +4,11 @@ Simple web application to store info about films and actors. Written using MVC a
 Requires PHP >=5.3 and MySql server.
 
 ### How to deploy:
-0.clone project;
-1.config your server(example for nginx below);
-2.edit config/DB.php - set proper user and password to mysql server;
-3.open your browser and visit "sitename/migration" page to create database and tables;
-4.go to "sitename/films";
+* clone project;
+* config your server(example for nginx below);
+* edit config/DB.php - set proper user and password to mysql server;
+* open your browser and visit "sitename/migration" page to create database and tables;
+* go to "sitename/films";
 
 nginx config example('/etc/nginx/sites-available/sitename', '/etc/nginx/sites-enabled/sitename')
 ```
