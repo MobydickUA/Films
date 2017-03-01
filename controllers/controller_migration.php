@@ -16,13 +16,13 @@
 			  `format` enum('VHS','DVD','Blu-Ray') NOT NULL DEFAULT 'VHS',
 			  PRIMARY KEY (`id`),
 			  UNIQUE KEY `nameYear` (`name`,`year`)
-			);";
+			) DEFAULT CHARSET=utf8;";
 			$q[3] = "CREATE TABLE `actors` (
 			  `id` int(11) NOT NULL AUTO_INCREMENT,
 			  `name` varchar(40) NOT NULL,
 			  PRIMARY KEY (`id`),
 			  UNIQUE KEY `name` (`name`)
-			);";
+			)DEFAULT CHARSET=utf8;";
 				$q[4] = "CREATE TABLE `actors_in_films` (
 			  `id` int(11) NOT NULL AUTO_INCREMENT,
 			  `film_id` int(11) NOT NULL,
@@ -33,7 +33,7 @@
 			  KEY `actor_name` (`actor_name`),
 			  CONSTRAINT `actors_in_films_ibfk_1` FOREIGN KEY (`film_id`) REFERENCES `films` (`id`),
 			  CONSTRAINT `actors_in_films_ibfk_2` FOREIGN KEY (`actor_name`) REFERENCES `actors` (`name`) ON UPDATE CASCADE
-			)";
+			)DEFAULT CHARSET=utf8";
 			foreach ($q as $query) {
 				if($db->query($query) === false) 
 					echo($this->db->error);
